@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário Bia</title>
+    <link rel="icon" type="image/png" href="https://tse2.mm.bing.net/th/id/OIP.pxgXAoT_AiHm5gHBnX1DFQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background decorative lines -->
+    <svg class="background-lines" viewBox="0 0 1200 800" preserveAspectRatio="none">
+        <path class="line" d="M-50,100 Q200,150 400,100 T800,120 T1250,80" />
+        <path class="line" d="M-50,300 Q150,350 350,280 T750,320 T1250,290" />
+        <path class="line" d="M-50,500 Q200,450 450,520 T850,480 T1250,510" />
+        <path class="line" d="M-50,700 Q180,750 380,680 T780,720 T1250,700" />
+    </svg>
+
+    <!-- Floating hearts -->
+    <div class="hearts" id="hearts"></div>
+
+    <!-- Section 1 - Invitation -->
+    <section class="section" id="section1">
+        <div class="card" id="card1">
+            <div class="card-content">
+                <h1> Aniversário Bia </h1>
+                <p class="highlight">Oiê queria te convidar para comemorar meu aniversário no dia 20/02, às 19h, no Honest Burguer</p>
+            </div>
+            <div class="card-decoration"></div>
+        </div>
+        <div class="scroll-indicator" onclick="scrollToSection2()">
+            <svg viewBox="0 0 24 24">
+                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Section 2 - Details -->
+    <section class="section" id="section2">
+        <div class="card" id="card2">
+            <div class="card-content">
+                <p>A ideia é a gente se reunir, dar risada e aproveitar juntos!</p>
+                <p>Será uma noite especial para estarmos juntos.</p>
+                <p>O consumo será individual (cada convidado paga o que consumir).</p>
+                <p class="highlight">Sua presença é o meu melhor presente! 💖</p>
+                <p style="margin-top: 30px; font-weight: 600; color: #4a0606;">Favor confirmar presença até o dia 20/02 12:00hs</p>
+                <a href="https://wa.me/555492992940?text=Confirmado!" target="_blank" class="confirm-btn"><img src="https://static.vecteezy.com/system/resources/previews/024/398/617/non_2x/whatsapp-logo-icon-isolated-on-transparent-background-free-png.png" alt="WhatsApp" class="btn-icon">Confirmar</a>
+            </div>
+            <div class="card-decoration"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

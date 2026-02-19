@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Confirm button */
+.confirm-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 15px 40px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.confirm-btn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.btn-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #7a0a0a;
+    min-height: 200vh;
+    overflow-x: hidden;
+}
+
+/* Decorative wavy lines */
+.background-lines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.line {
+    position: absolute;
+    stroke: #5a0808;
+    stroke-width: 2;
+    fill: none;
+}
+
+/* Section styling */
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card styling */
+.card {
+    background-color: #fce4e4;
+    border-radius: 25px;
+    padding: 60px 50px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.card h1 {
+    color: #7a0a0a;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.card p {
+    color: #7a0a0a;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.card .highlight {
+    font-weight: 500;
+}
+
+/* Bottom decoration on card */
+.card-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background-color: #4a0606;
+    border-radius: 0 0 25px 25px;
+}
+
+/* First section card */
+#section1 .card {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#section1 .card.fade-out {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+/* Second section */
+#section2 {
+    padding-bottom: 100px;
+}
+
+#section2 .card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#section2 .card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+.scroll-indicator svg {
+    width: 40px;
+    height: 40px;
+    fill: #fce4e4;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-15px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-7px);
+    }
+}
+
+/* Heart decoration */
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    color: rgba(252, 228, 228, 0.1);
+    animation: float 15s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .card {
+        padding: 40px 25px;
+        padding-bottom: 100px;
+    }
+
+    .card h1 {
+        font-size: 1.5rem;
+    }
+
+    .card p {
+        font-size: 1rem;
+    }
+}
